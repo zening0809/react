@@ -37,7 +37,7 @@ export default class Routers extends Component {
 
                 </Route>
                 <Route path='/home' component={Main}>
-                      <IndexRoute component = {HomeIndex}/>
+                      <Route path = 'index' component = {HomeIndex}/>
                       <Route path = 'price' component = {Price}/>
                       <Route path = 'brand' component = {Brand}/>
                       <Route path = 'type' component = {Type}/>

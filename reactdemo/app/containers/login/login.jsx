@@ -16,7 +16,7 @@ class Login extends React.Component {
                     <input name='phoneNum' name="phonenum" className="loginaccount" type="text"></input>
                     <input name="verifycode" className="loginPassword" type="text"></input>
                     <div className="getCovert">获取验证码</div>
-                    <Link className="loginBtn" to='/home'>联系我们</Link>
+                    <Link className="loginBtn" to='/home/index'>联系我们</Link>
                     <div className="testHint"></div>
                 </div>
             </div>
