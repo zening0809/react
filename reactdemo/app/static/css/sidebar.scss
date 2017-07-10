@@ -1,0 +1,75 @@
+.exhibitList {
+    width: 236px;
+    height: 100%;
+    float: left;
+    .exhibitListTitle {
+        width: 100%;
+        height: 88px;
+        background: #de6734;
+        color: #fff;
+        font: 700 18px '微软雅黑';
+        line-height: 88px;
+        text-align: center;
+        cursor: pointer;
+    }
+     .exhibitNavbar {
+        background: #323232;
+        padding-top: 10px;
+        height: 100%;
+        min-height: 711px;
+    }
+    .exhibitNavbarTitle {
+        height: 48px;
+        font: 16px '微软雅黑';
+        color: #de6734;
+        line-height: 48px;
+        padding-left: 30px;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .exhibitNavbar .exhibitNavContent {
+        height: 144px;
+        font: 14px '微软雅黑';
+        color: #6f6f6f;
+    }
+    .exhibitNavContent li a {
+        display: block;
+        height: 48px;
+        line-height: 48px;
+        padding-left: 30px;
+        transition: all .2s;
+        cursor: pointer;
+        position: relative;
+    }
+    .exhibitNavContent li a:hover {
+        background: #fff;
+        color: #de6734;
+    }
+    .currentSelect {
+        background: #fff;
+        color: #de6734;
+    }
+    .freeSearch {
+        display: block;
+        width: 124px;
+        height: 48px;
+        background: #de6734;
+        font: 14px '微软雅黑';
+        color: #fff;
+        text-align: center;
+        line-height: 48px;
+        margin-left: 56px;
+        margin-top: 85px;
+        cursor: pointer;
+        border-radius: 2px;
+        transition: all .2s;
+    }
+    .freeSearch:hover {
+        background: #cd4921;
+    } // .dataHistogram::-webkit-scrollbar{width:0px}
+    /*标题样式*/
+    a i {
+        margin-right: 10px;
+    }
+}
