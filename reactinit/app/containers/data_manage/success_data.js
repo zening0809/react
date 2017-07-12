@@ -1,8 +1,11 @@
 import React from 'react'
-import { Table, Icon } from 'antd';
+import { Table, Icon, Tabs, Button, Select } from 'antd';
 import WrappedRegistrationForm from '../../components/form/create_form'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { Link } from 'react-router'
+const TabPane = Tabs.TabPane;
+const Option = Select.Option;
+
 
 import '../../static/css/form-animate.css'
 
@@ -14,9 +17,11 @@ class Success extends React.Component {
             createForm: false
         }
     }
-
-    showForm(){
-        this.setState({createForm: true})
+    handleChange(value) {
+        console.log(`selected ${value}`);
+    }
+    showForm() {
+        this.setState({ createForm: true })
         console.log(this.setState);
     }
     render() {
@@ -57,23 +62,44 @@ class Success extends React.Component {
                         More actions <Icon type="down" />
                     </a>
                 </span>
-                
+
             ),
         }];
 
         return (
-            <div>
-                <button onClick = {this.showForm.bind(this)}>新建表单</button>
-                <Table dataSource={dataSource} columns={columns} />
-                <ReactCSSTransitionGroup
-                component = "div" 
-                transitionName = "example"
-                transitionEnterTimeout = {500}
-                transitionLeaveTimeout = {300}
-                >
-                    {this.state.createForm? <WrappedRegistrationForm></WrappedRegistrationForm>:''}
-                </ReactCSSTransitionGroup>
-            </div>
+            <Tabs defaultActiveKey="1">
+                <TabPane tab={<span><Icon type="apple" />联通</span>} key="1">
+                    <div style={{ height: "36px", marginBottom: '20px' ,marginTop: '15px' }}>
+                        <span style={{color:"#0094ff"}}>当前项目: &nbsp;&nbsp;</span>
+                        <Select
+                            showSearch
+                            style={{ width: 200 }}
+                            placeholder="Select a person"
+                            optionFilterProp="children"
+                            onChange={this.handleChange.bind(this)}
+                            filterOption={(input, option) => option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
+                        >
+                            <Option value="东风雪铁龙项目">东风雪铁龙项目</Option>
+                            <Option value="大众甲壳虫项目">大众甲壳虫项目</Option>
+                            <Option value="长安奔奔项目">长安奔奔项目</Option>
+                        </Select>
+                        <Button style={{ float: 'right' }} onClick={this.showForm.bind(this)} type="primary">新建表单</Button>
+                    </div>
+
+                    <Table dataSource={dataSource} columns={columns} />
+                    <ReactCSSTransitionGroup
+                        component="div"
+                        transitionName="example"
+                        transitionEnterTimeout={500}
+                        transitionLeaveTimeout={300}
+                    >
+                        {this.state.createForm ? <WrappedRegistrationForm></WrappedRegistrationForm> : ''}
+                    </ReactCSSTransitionGroup>
+                </TabPane>
+                <TabPane tab={<span><Icon type="android" />电信</span>} key="2">
+                    电信
+                </TabPane>
+            </Tabs>
         )
     }
 
