@@ -7,16 +7,17 @@ class Success extends React.Component {
     constructor(props, context) {
         super(props, context)
         // this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+
         this.state = {
-            createForm : false
+            createForm: false
         }
     }
 
-       showForm(){
-          this.setState({createForm : true})
-          console.log(this.setState);
-       }
+    showForm() {
+        this.setState({ createForm: !this.state.createForm })
+    }
     render() {
+
         const dataSource = [{
             key: '1',
             name: '胡彦斌',
@@ -54,17 +55,17 @@ class Success extends React.Component {
                         More actions <Icon type="down" />
                     </a>
                 </span>
-                
+
             ),
         }];
 
         return (
             <div>
-                 <button onClick = {this.showForm.bind(this)}>新建表单</button>
-                 <Table dataSource={dataSource} columns={columns} />
-                     if(this.state.createForm){
-                       <WrappedRegistrationForm></WrappedRegistrationForm>
-                     }
+                <button onClick={this.showForm.bind(this)}>新建表单</button>
+                <Table dataSource={dataSource} columns={columns} />
+                {this.state.createForm &&
+                    <WrappedRegistrationForm></WrappedRegistrationForm>
+                }
             </div>
         )
     }
