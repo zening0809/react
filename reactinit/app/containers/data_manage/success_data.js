@@ -27,39 +27,72 @@ class Success extends React.Component {
     render() {
         const dataSource = [{
             key: '1',
+            date:'2017-7-3',
             name: '胡彦斌',
-            age: 32,
-            address: '西湖区湖底公园1号'
+            gender: '先生',
+            phonenum:'1371****138',
+            appraise: '那你很棒棒哦'
         }, {
             key: '2',
-            name: '胡彦祖',
-            age: 42,
-            address: '西湖区湖底公园1号'
+            date:'2017-7-3',
+            name: '陈一发',
+            gender: '女',
+            phonenum:'1371****138',
+            appraise: '那你很棒棒哦'
+        }, {
+            key: '3',
+            date:'2017-7-3',
+            name: '陈一发',
+            gender: '女',
+            phonenum:'1371****138',
+            appraise: '那你很棒棒哦'
+        }, {
+            key: '4',
+            date:'2017-7-3',
+            name: '陈一发',
+            gender: '女',
+            phonenum:'1371****138',
+            appraise: '那你很棒棒哦'
+        }, {
+            key: '5',
+            date:'2017-7-3',
+            name: '陈一发',
+            gender: '女',
+            phonenum:'1371****138',
+            appraise: '那你很棒棒哦'
         }];
 
         const columns = [{
+            title: '日期',
+            dataIndex: 'date',
+            key: 'date',
+        }, {
             title: '姓名',
             dataIndex: 'name',
             key: 'name',
         }, {
-            title: '年龄',
-            dataIndex: 'age',
-            key: 'age',
+            title: '性别',
+            dataIndex: 'gender',
+            key: 'gender',
         }, {
-            title: '住址',
-            dataIndex: 'address',
-            key: 'address',
+            title: '原始号码',
+            dataIndex: 'phonenum',
+            key: 'phonenum',
+        }, {
+            title: '外呼评价',
+            dataIndex: 'appraise',
+            key: 'appraise',
         }, {
             title: 'Action',
             key: 'action',
             render: (text, record) => (
                 <span>
-                    <a href="#">Action 一 {record.name}</a>
+                    <a href="#">修改 {record.name}</a>
                     <span className="ant-divider" />
-                    <a href="#">Delete</a>
+                    <a href="#">上传录音</a>
                     <span className="ant-divider" />
                     <a href="#" className="ant-dropdown-link">
-                        More actions <Icon type="down" />
+                        查看详情
                     </a>
                 </span>
 
