@@ -1,21 +1,24 @@
 import React from 'react'
 import { Table, Icon } from 'antd';
 import WrappedRegistrationForm from '../../components/form/create_form'
-
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { Link } from 'react-router'
+
+import '../../static/css/form-animate.css'
+
 class Success extends React.Component {
     constructor(props, context) {
         super(props, context)
         // this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
         this.state = {
-            createForm : false
+            createForm: false
         }
     }
 
-       showForm(){
-          this.setState({createForm : true})
-          console.log(this.setState);
-       }
+    showForm(){
+        this.setState({createForm: true})
+        console.log(this.setState);
+    }
     render() {
         const dataSource = [{
             key: '1',
@@ -60,11 +63,16 @@ class Success extends React.Component {
 
         return (
             <div>
-                 <button onClick = {this.showForm.bind(this)}>新建表单</button>
-                 <Table dataSource={dataSource} columns={columns} />
-                     if(this.state.createForm){
-                       <WrappedRegistrationForm></WrappedRegistrationForm>
-                     }
+                <button onClick = {this.showForm.bind(this)}>新建表单</button>
+                <Table dataSource={dataSource} columns={columns} />
+                <ReactCSSTransitionGroup
+                component = "div" 
+                transitionName = "example"
+                transitionEnterTimeout = {500}
+                transitionLeaveTimeout = {300}
+                >
+                    {this.state.createForm? <WrappedRegistrationForm></WrappedRegistrationForm>:''}
+                </ReactCSSTransitionGroup>
             </div>
         )
     }

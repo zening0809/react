@@ -1,17 +1,21 @@
+#app, #app .layout {
+  height: 100%;
+}
+
 #app .logo {
-    height: 36px;
-    background: #333;
-    border-radius: 6px;
-    margin: 16px;
-    float: right;
+  height: 36px;
+  background: #333;
+  border-radius: 6px;
+  margin: 16px;
+  float: right;
 }
 
 #app .logo i {
-    display: block;
+  display: block;
 }
 
 #app .header {
-    background-color: #0094ff;
-    font-size: 36px;
-    font-weight: 700;
+  background-color: #0094ff;
+  font-size: 36px;
+  font-weight: 700;
 }
