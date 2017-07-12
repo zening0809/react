@@ -33,7 +33,6 @@ class Home extends React.Component {
 			<Layout className="layout">
 			<Header className="header">
 			<span>{this.state.title}</span>
-			<Link to="/" className="logo" title="返回首页"><Icon type="rollback" /></Link>
 			</Header>
 			
 			<Layout>
