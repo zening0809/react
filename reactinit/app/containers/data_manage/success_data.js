@@ -1,13 +1,21 @@
 import React from 'react'
 import { Table, Icon } from 'antd';
-
+import WrappedRegistrationForm from '../../components/form/create_form'
 
 import { Link } from 'react-router'
 class Success extends React.Component {
     constructor(props, context) {
         super(props, context)
         // this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+        this.state = {
+            createForm : false
+        }
     }
+
+       showForm(){
+          this.setState({createForm : true})
+          console.log(this.setState);
+       }
     render() {
         const dataSource = [{
             key: '1',
@@ -46,12 +54,18 @@ class Success extends React.Component {
                         More actions <Icon type="down" />
                     </a>
                 </span>
+                
             ),
         }];
 
-
         return (
-            <Table dataSource={dataSource} columns={columns} />
+            <div>
+                 <button onClick = {this.showForm.bind(this)}>新建表单</button>
+                 <Table dataSource={dataSource} columns={columns} />
+                     if(this.state.createForm){
+                       <WrappedRegistrationForm></WrappedRegistrationForm>
+                     }
+            </div>
         )
     }
 
