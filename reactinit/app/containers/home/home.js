@@ -61,14 +61,14 @@ class Home extends React.Component {
                                 </SubMenu>
                                 <SubMenu key="sub2" title="外呼管理">
 
-                                    <Menu.Item key="2">{this.state.seat}</Menu.Item>
+                                    <Menu.Item key="2"> <Link  to="/home/seatmange">{this.state.seat}</Link></Menu.Item>
                                 </SubMenu>
                                 <SubMenu key="sub3" title="线索管理">
                                     <MenuItemGroup key="g1" title="成功线索">
-                                        <Menu.Item key="3">{this.state.successCar}</Menu.Item>
+                                        <Menu.Item key="3"><Link  to="/home/successcar">{this.state.successCar}</Link></Menu.Item>
                                     </MenuItemGroup>
                                     <MenuItemGroup key="g2" title="下发管理">
-                                        <Menu.Item key="4">{this.state.callCar}</Menu.Item>
+                                        <Menu.Item key="4"><Link  to="/home/slotcar">{this.state.callCar}</Link></Menu.Item>
                                     </MenuItemGroup>
                                 </SubMenu>
                                 <SubMenu key="sub4" title="数据管理">
