@@ -1,16 +1,16 @@
 import React from 'react'
 
-import { Link } from 'react-router'
-class Header extends React.Component {
+import {Link} from 'react-router'
+
+class ProjectCar extends React.Component {
     constructor(props, context) {
         super(props, context)
         // this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     }
-    render() {     
+    render() {
         return (
-            <div>我是顶部</div>
+             <Link to="/home/success">我是项目管理汽车行业</Link>
         )
     }
-
 }
-module.exports = Header
+module.exports = ProjectCar 

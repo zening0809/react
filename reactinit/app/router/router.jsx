@@ -4,6 +4,7 @@ import { Router, Route, Link, Redirect, hashHistory, browserHistory, IndexRoute 
 import Login from '../containers/login/login'
 import Home from '../containers/home/home'
 import SuccessData from '../containers/data_manage/success_data'
+import ProjectCar from '../containers/operate/project/project_car'
 
 
 export default class Routers extends Component {
@@ -28,6 +29,7 @@ export default class Routers extends Component {
                 </Route>
                 <Route path='/home' component={Home}>
                     <Route path = 'success' component = {SuccessData}/>
+                    <Route path = 'projectcar' component = {ProjectCar}/>
                 </Route>
             </Router>
         )

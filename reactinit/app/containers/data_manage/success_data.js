@@ -87,7 +87,7 @@ class Success extends React.Component {
             key: 'action',
             render: (text, record) => (
                 <span>
-                    <a href="#">修改 {record.name}</a>
+                    <a href="#">修改</a>
                     <span className="ant-divider" />
                     <a href="#">上传录音</a>
                     <span className="ant-divider" />
