@@ -2,7 +2,7 @@ import React from 'react'
 import { Table, Icon, Tabs, Button, Select } from 'antd';
 import WrappedRegistrationForm from '../../components/form/create_form'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import { Link } from 'react-router'
+
 const TabPane = Tabs.TabPane;
 const Option = Select.Option;
 
