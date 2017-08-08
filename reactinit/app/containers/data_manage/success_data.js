@@ -1,6 +1,6 @@
 import React from 'react'
 import { Table, Icon, Tabs, Button, Select } from 'antd';
-import WrappedRegistrationForm from '../../components/form/create_form'
+import WrappedRegistrationForm from '../../components/form/create_form.js'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 const TabPane = Tabs.TabPane;
@@ -125,6 +125,8 @@ class Success extends React.Component {
                         transitionName="example"
                         transitionEnterTimeout={500}
                         transitionLeaveTimeout={300}
+                        transitionAppear={true}
+                        transitionAppearTimeout={500}
                     >
                         {this.state.createForm ? <WrappedRegistrationForm></WrappedRegistrationForm> : ''}
                     </ReactCSSTransitionGroup>
