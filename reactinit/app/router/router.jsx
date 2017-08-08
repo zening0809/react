@@ -36,7 +36,7 @@ export default class Routers extends Component {
                     <Route path = 'success' component = {SuccessData}/>
                     <Route path = 'projectcar' component = {ProjectCar}/>
                     <Route path = 'seatmange' component = {SeatMange}/>
-                     <Route path = 'successcar' component = {SuccessCar}/>
+                    <Route path = 'successcar' component = {SuccessCar}/>
                     <Route path = 'slotcar' component = {SlotCar}/>
                 </Route>
             </Router>

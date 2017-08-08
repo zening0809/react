@@ -14,7 +14,7 @@ class SelectTag extends React.Component {
     render() {
         return (
         
-                 <div className="gutter-example">
+                <div className="gutter-example">
                         <Row style={{ marginBottom: "15px" }} gutter={16}>
                             <Col className="gutter-row" span={6}>
                                 <div className="gutter-box">
@@ -154,7 +154,7 @@ class SelectTag extends React.Component {
                                 </div>
                             </Col>
                         </Row>
-                    </div>
+                </div>
             
         )
     }
